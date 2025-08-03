@@ -3,14 +3,14 @@ on:
   push:
     branches:
       - main
-jobs1:
-  say-hello:
+jobs:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: Step 1 - Greet
         run: echo "Hello from step 1"
-jobs2:
-  runs-on: ubuntu-latest
-  steps:
-  - name: Job 2 step
-    run: echo "This is Job 2"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job 2 step
+        run: echo "This is Job 2"
