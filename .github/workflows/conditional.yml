@@ -1,0 +1,14 @@
+name: Hello Workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  conditional:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "This always runs"
+      - name: Run only on success
+        if: success()
+        run: echo "Previous step passed"
