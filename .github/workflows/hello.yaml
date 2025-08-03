@@ -1,18 +1,16 @@
 name: Hello Workflow
-
-on: 
-  push: 
-    branches: 
+on:
+  push:
+    branches:
       - main
-
-jobs: 
-   say-hello:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Step 1 - Greet
-         run: echo "Hello from step 1"
-       - name: Step 2 - Show current directory
-         run: pwd
-       - name: Step 3 - List files
-         run: ls -la  
-         
+jobs1:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Greet
+        run: echo "Hello from step 1"
+jobs2:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Job 2 step
+    run: echo "This is Job 2"
